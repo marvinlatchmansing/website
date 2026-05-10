@@ -1,0 +1,72 @@
+async function loadDocuments(){
+
+    const response = await fetch('documents.php');
+    const files = await response.json();
+
+    const grid = document.getElementById('documentsGridOld');
+
+    files.forEach(file => {
+
+        let icon = 'fa-file';
+
+        if(file.type.includes('pdf')){
+            icon = 'fa-file-pdf';
+        }
+        else if(file.type.includes('word')){
+            icon = 'fa-file-word';
+        }
+        else if(file.type.includes('excel')){
+            icon = 'fa-file-excel';
+        }
+        else if(file.type.includes('image')){
+            icon = 'fa-file-image';
+        }
+
+        grid.innerHTML += `
+        
+            <div class="document-card">
+
+                <div class="document-top">
+
+                    <div class="file-icon">
+                        <i class="fa-solid ${icon}"></i>
+                    </div>
+
+                    <div class="file-type">
+                        ${file.extension.toUpperCase()}
+                    </div>
+
+                </div>
+
+                <h2 class="document-name">
+                    ${file.name}
+                </h2>
+
+                <div class="document-info">
+                    <span>${file.size}</span>
+                </div>
+
+                <div class="document-actions">
+
+                    <a href="${file.path}" 
+                       target="_blank"
+                       class="btn view-btn">
+                        View
+                    </a>
+
+                    <a href="${file.path}" 
+                       download
+                       class="btn download-btn">
+                        Download
+                    </a>
+
+                </div>
+
+            </div>
+
+        `;
+    });
+
+}
+
+loadDocuments();

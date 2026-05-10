@@ -32,5 +32,6 @@ foreach($files as $file){
 
 header('Content-Type: application/json');
 
+error_log( json_encode($data));
 echo json_encode($data);
 ?>
