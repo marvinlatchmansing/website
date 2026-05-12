@@ -1,13 +1,13 @@
 const files = [
     {
-        "name": "cd-dutch.docx",
+        "name": "cv-dutch.docx",
         "path": "documents/cd-dutch.docx",
         "extension": "docx",
         "size": "2570.74 KB",
         "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     },
     {
-        "name": "cd-dutch.pdf",
+        "name": "cv-dutch.pdf",
         "path": "documents/cd-dutch.pdf",
         "extension": "pdf",
         "size": "14.44 KB",
