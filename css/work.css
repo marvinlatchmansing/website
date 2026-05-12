@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #0f172a;
+    color: white;
+}
+
+/* Header */
+.work-header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.work-header h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.work-header p {
+    color: #94a3b8;
+}
+
+/* Grid */
+.work-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+
+/* Card */
+.work-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.work-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icon */
+.work-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+    color: #38bdf8;
+}
+
+/* Text */
+.work-card h2 {
+    margin: 10px 0;
+}
+
+.work-card p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+/* Tags */
+.work-tags {
+    margin: 15px 0;
+}
+
+.work-tags span {
+    display: inline-block;
+    background: #334155;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+/* Button */
+.work-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #38bdf8;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.work-btn:hover {
+    background: #0ea5e9;
+}
